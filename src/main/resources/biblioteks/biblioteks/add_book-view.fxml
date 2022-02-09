@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4e4e50;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteks.biblioteks.AddBookController">
+   <children>
+      <AnchorPane prefHeight="400.0">
+         <children>
+            <GridPane prefHeight="400.0" prefWidth="360.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="author_list" layoutX="14.0" layoutY="20.0" onMouseClicked="#onAuthorListSelected" prefHeight="27.0" prefWidth="250.0" promptText="Autor (WYMAGANE)" style="-fx-background-color: gray;" />
+                        <Button fx:id="new_author" alignment="CENTER" contentDisplay="CENTER" layoutX="292.0" layoutY="20.0" mnemonicParsing="false" onAction="#onNewAuthorPressed" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #6f2232;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="title" alignment="CENTER" layoutX="15.0" layoutY="21.0" prefHeight="26.0" prefWidth="330.0" promptText="Tytuł (WYMAGANE)" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <TextArea fx:id="desc" blendMode="SRC_ATOP" layoutX="15.0" prefHeight="66.0" prefWidth="330.0" promptText="Opis" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <ComboBox fx:id="genre_list" layoutX="14.0" layoutY="20.0" onMouseClicked="#onGenreListSelected" prefHeight="27.0" prefWidth="250.0" promptText="Gatunek (WYMAGANE)" style="-fx-background-color: gray;" />
+                        <Button fx:id="new_genre" alignment="CENTER" contentDisplay="CENTER" layoutX="292.0" layoutY="21.0" mnemonicParsing="false" onAction="#onNewGenrePressed" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #6f2232;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <ComboBox fx:id="publisher_list" layoutX="14.0" layoutY="20.0" onMouseClicked="#onPublisherListSelected" prefHeight="27.0" prefWidth="250.0" promptText="Wydawnictwo (WYMAGANE)" style="-fx-background-color: gray;" />
+                        <Button fx:id="new_publisher" alignment="CENTER" contentDisplay="CENTER" layoutX="292.0" layoutY="20.0" mnemonicParsing="false" onAction="#onNewPublisherPressed" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #6f2232;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                     <children>
+                        <TextField fx:id="year" alignment="CENTER" layoutX="15.0" layoutY="20.0" prefHeight="26.0" prefWidth="330.0" promptText="Rok wydania" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="360.0" prefHeight="400.0" prefWidth="240.0">
+         <children>
+            <Button fx:id="add_btn" alignment="CENTER" layoutX="71.0" layoutY="346.0" mnemonicParsing="false" onAction="#onAddPressed" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: #c3073f;" text="Dodaj" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="111.0" fitWidth="155.0" layoutX="44.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/logo.png" />
+               </image></ImageView>
+            <Label fx:id="window_name" alignment="CENTER" layoutX="25.0" prefHeight="40.0" prefWidth="192.0" text="DODAJ KSIĄŻKĘ" textAlignment="CENTER" />
+            <Label fx:id="alert_text" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="247.0" prefHeight="73.0" prefWidth="206.0" textFill="#fc0101" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

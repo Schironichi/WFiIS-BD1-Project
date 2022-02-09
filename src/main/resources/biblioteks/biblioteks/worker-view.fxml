@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4e4e50;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteks.biblioteks.WorkerController">
+   <top>
+      <AnchorPane prefWidth="246.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar buttonMinWidth="65.0" prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #6e6e70;">
+              <buttons>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutY="11.0" text="BiblioteKS" />
+                     </children></Pane>
+                  <Pane prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="59.0" layoutY="11.0" text="Pracownik" textAlignment="RIGHT" />
+                     </children></Pane>
+                  <Button fx:id="logout_btn" mnemonicParsing="false" onAction="#onLogoutButtonPressed" prefHeight="30.0" style="-fx-background-color: #6f2232;" text="Wyloguj" textFill="WHITE" />
+              </buttons>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="books_btn" layoutX="51.0" layoutY="25.0" mnemonicParsing="false" onAction="#onBooksPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Książki" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="authors_btn" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#onAuthorsPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Autorzy" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="warehouses_btn" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#onWarehousesPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Hurtownie" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="books_prices_btn" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#onBooksPricesPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Ceny Książek" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="deliveries_btn" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#onDeliveriesPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Dostawy" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="fill_delivery" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#onFillDeliveryPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Uzupełnij Dostawę" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="book_order_btn" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onAction="#onBookOrderSelected" prefHeight="55.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Rezerwacje&#10;Zamówienia" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="user_view" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" onAction="#onUserViewPressed" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c3073f #c3073f;" text="Widok Użytkownika" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4e4e50;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteks.biblioteks.LoggedController">
+   <top>
+      <AnchorPane prefHeight="90.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar buttonMinWidth="65.0" prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #6e6e70;">
+              <buttons>
+                  <Button fx:id="profile_btn" mnemonicParsing="false" onAction="#onProfilePressed" prefHeight="30.0" style="-fx-background-color: #c3073f;" text="Profil" textFill="WHITE" />
+                  <Pane prefHeight="40.0" prefWidth="229.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="104.0" text="Porada:&#10;Kliknij w książkę" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label fx:id="alert_text" alignment="TOP_LEFT" prefHeight="40.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="6.0" />
+                     </font></Label>
+                  <Button fx:id="menu_left_btn" mnemonicParsing="false" onAction="#onMenuLeftButtonPressed" prefHeight="30.0" style="-fx-background-color: #c3073f;" text="Koszyk" textFill="WHITE" />
+                  <Button fx:id="menu_right_btn" mnemonicParsing="false" onAction="#onMenuRightButtonPressed" prefHeight="30.0" style="-fx-background-color: #6f2232;" text="Wyloguj" textFill="WHITE" />
+              </buttons>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </ButtonBar>
+            <GridPane layoutY="40.0" prefHeight="50.0" prefWidth="600.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="search_selection" layoutX="25.0" layoutY="12.0" onAction="#onSearchSelectionPressed" prefWidth="150.0" promptText="Szukaj po..." style="-fx-background-color: gray;" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ComboBox fx:id="selection" disable="true" layoutX="25.0" layoutY="13.0" onMouseClicked="#onSelectionPressed" prefWidth="150.0" promptText="Wybierz" style="-fx-background-color: gray;" visible="false" />
+                        <TextField fx:id="selection_title" disable="true" layoutX="25.0" layoutY="13.0" prefHeight="27.0" prefWidth="150.0" promptText="Tytuł" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Button fx:id="search_btn" disable="true" layoutX="25.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSearchPressed" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #c3073f;" text="Szukaj" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" onMouseClicked="#onTableSelection" prefHeight="310.0" prefWidth="600.0" style="-fx-background-color: #1a1a1d;" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
