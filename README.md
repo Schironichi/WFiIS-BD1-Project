@@ -6,7 +6,8 @@ The project structure and javadoc documentation were created using IntelliJ IDEA
 The project was created using:
 - OpenJDK - 11.0.13,
 - JavaFX - 11.0.2,
-- PostgreSQL JDBC - 42.3.1.
+- PostgreSQL JDBC - 42.3.1,
+- Maven (managed in IntelliJ IDEA IDE).
 
 ## Documentation
 
