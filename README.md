@@ -17,6 +17,10 @@ Documentation (also in Polish) generated with the javadoc command is available [
 
 All database generation files are located in the [SQL](SQL) directory. There is also an [Entity Relationship Diagram](doc/ERD.pdf) the represents the structure of the database.
 
+## Genesis
+
+The project was created for the subject Databases 1 (Bazy Danych 1) during the V semester of studies.
+
 ## Showcase
 
 The project presentation in the form of screenshots is available [here](showcase) and in the above documentation.
